@@ -212,7 +212,10 @@ namespace TP4_SIM
         }
 
         private void LimpiarCampos(){
-            
+            tbxIteracion.Text = "";
+            tbxDesde.Text = "";
+            tbxHasta.Text = "";
+            dgv_datos.Rows.Clear();
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)

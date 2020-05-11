@@ -49,10 +49,10 @@
             this.lv_mujer = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnGenerar = new System.Windows.Forms.Button();
-            this.btnBorrar = new System.Windows.Forms.Button();
             this.desde = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.hasta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnGenerar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.lv_hombre = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -64,48 +64,54 @@
             // lblIteracion
             // 
             this.lblIteracion.AutoSize = true;
-            this.lblIteracion.Location = new System.Drawing.Point(58, 70);
+            this.lblIteracion.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIteracion.Location = new System.Drawing.Point(58, 83);
             this.lblIteracion.Name = "lblIteracion";
-            this.lblIteracion.Size = new System.Drawing.Size(62, 17);
+            this.lblIteracion.Size = new System.Drawing.Size(67, 19);
             this.lblIteracion.TabIndex = 0;
             this.lblIteracion.Text = "Iteracion";
             // 
             // tbxIteracion
             // 
-            this.tbxIteracion.Location = new System.Drawing.Point(150, 65);
+            this.tbxIteracion.Location = new System.Drawing.Point(150, 77);
+            this.tbxIteracion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbxIteracion.Name = "tbxIteracion";
-            this.tbxIteracion.Size = new System.Drawing.Size(100, 22);
+            this.tbxIteracion.Size = new System.Drawing.Size(100, 27);
             this.tbxIteracion.TabIndex = 1;
             // 
             // tbxDesde
             // 
-            this.tbxDesde.Location = new System.Drawing.Point(150, 105);
+            this.tbxDesde.Location = new System.Drawing.Point(150, 125);
+            this.tbxDesde.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbxDesde.Name = "tbxDesde";
-            this.tbxDesde.Size = new System.Drawing.Size(100, 22);
+            this.tbxDesde.Size = new System.Drawing.Size(100, 27);
             this.tbxDesde.TabIndex = 3;
             // 
             // lblDesde
             // 
             this.lblDesde.AutoSize = true;
-            this.lblDesde.Location = new System.Drawing.Point(58, 110);
+            this.lblDesde.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesde.Location = new System.Drawing.Point(58, 131);
             this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Size = new System.Drawing.Size(49, 17);
+            this.lblDesde.Size = new System.Drawing.Size(51, 19);
             this.lblDesde.TabIndex = 2;
             this.lblDesde.Text = "Desde";
             // 
             // tbxHasta
             // 
-            this.tbxHasta.Location = new System.Drawing.Point(150, 144);
+            this.tbxHasta.Location = new System.Drawing.Point(150, 171);
+            this.tbxHasta.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbxHasta.Name = "tbxHasta";
-            this.tbxHasta.Size = new System.Drawing.Size(100, 22);
+            this.tbxHasta.Size = new System.Drawing.Size(100, 27);
             this.tbxHasta.TabIndex = 5;
             // 
             // lblHasta
             // 
             this.lblHasta.AutoSize = true;
-            this.lblHasta.Location = new System.Drawing.Point(58, 149);
+            this.lblHasta.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHasta.Location = new System.Drawing.Point(58, 177);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(45, 17);
+            this.lblHasta.Size = new System.Drawing.Size(47, 19);
             this.lblHasta.TabIndex = 4;
             this.lblHasta.Text = "Hasta";
             this.lblHasta.Click += new System.EventHandler(this.label3_Click);
@@ -113,9 +119,10 @@
             // lblMujer
             // 
             this.lblMujer.AutoSize = true;
-            this.lblMujer.Location = new System.Drawing.Point(484, 41);
+            this.lblMujer.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMujer.Location = new System.Drawing.Point(460, 45);
             this.lblMujer.Name = "lblMujer";
-            this.lblMujer.Size = new System.Drawing.Size(43, 17);
+            this.lblMujer.Size = new System.Drawing.Size(47, 19);
             this.lblMujer.TabIndex = 8;
             this.lblMujer.Text = "Mujer";
             this.lblMujer.Click += new System.EventHandler(this.label1_Click);
@@ -123,9 +130,10 @@
             // lblHombre
             // 
             this.lblHombre.AutoSize = true;
-            this.lblHombre.Location = new System.Drawing.Point(977, 41);
+            this.lblHombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHombre.Location = new System.Drawing.Point(801, 45);
             this.lblHombre.Name = "lblHombre";
-            this.lblHombre.Size = new System.Drawing.Size(58, 17);
+            this.lblHombre.Size = new System.Drawing.Size(64, 19);
             this.lblHombre.TabIndex = 9;
             this.lblHombre.Text = "Hombre";
             // 
@@ -142,10 +150,11 @@
             this.rndCompra,
             this.rndSuscripcion,
             this.Suscrpcion});
-            this.dgv_datos.Location = new System.Drawing.Point(46, 277);
+            this.dgv_datos.Location = new System.Drawing.Point(46, 329);
+            this.dgv_datos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_datos.Name = "dgv_datos";
             this.dgv_datos.RowTemplate.Height = 24;
-            this.dgv_datos.Size = new System.Drawing.Size(1270, 306);
+            this.dgv_datos.Size = new System.Drawing.Size(964, 293);
             this.dgv_datos.TabIndex = 10;
             // 
             // nroCasa
@@ -200,10 +209,12 @@
             this.columnHeader4,
             this.desde,
             this.hasta});
+            this.lv_mujer.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_mujer.HideSelection = false;
-            this.lv_mujer.Location = new System.Drawing.Point(321, 70);
+            this.lv_mujer.Location = new System.Drawing.Point(321, 83);
+            this.lv_mujer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lv_mujer.Name = "lv_mujer";
-            this.lv_mujer.Size = new System.Drawing.Size(431, 180);
+            this.lv_mujer.Size = new System.Drawing.Size(341, 184);
             this.lv_mujer.TabIndex = 13;
             this.lv_mujer.UseCompatibleStateImageBehavior = false;
             this.lv_mujer.View = System.Windows.Forms.View.Details;
@@ -217,27 +228,7 @@
             // 
             this.columnHeader4.Text = "Probabillidad";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 98;
-            // 
-            // btnGenerar
-            // 
-            this.btnGenerar.Location = new System.Drawing.Point(161, 207);
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
-            this.btnGenerar.TabIndex = 14;
-            this.btnGenerar.Text = "Generar";
-            this.btnGenerar.UseVisualStyleBackColor = true;
-            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.Location = new System.Drawing.Point(61, 207);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
-            this.btnBorrar.TabIndex = 16;
-            this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            this.columnHeader4.Width = 119;
             // 
             // desde
             // 
@@ -249,6 +240,30 @@
             this.hasta.Text = "Hasta";
             this.hasta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerar.Location = new System.Drawing.Point(159, 246);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(91, 40);
+            this.btnGenerar.TabIndex = 14;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.Location = new System.Drawing.Point(61, 246);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(82, 40);
+            this.btnBorrar.TabIndex = 16;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
             // lv_hombre
             // 
             this.lv_hombre.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -256,10 +271,12 @@
             this.columnHeader2,
             this.columnHeader5,
             this.columnHeader6});
+            this.lv_hombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_hombre.HideSelection = false;
-            this.lv_hombre.Location = new System.Drawing.Point(822, 70);
+            this.lv_hombre.Location = new System.Drawing.Point(674, 83);
+            this.lv_hombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lv_hombre.Name = "lv_hombre";
-            this.lv_hombre.Size = new System.Drawing.Size(431, 180);
+            this.lv_hombre.Size = new System.Drawing.Size(336, 184);
             this.lv_hombre.TabIndex = 17;
             this.lv_hombre.UseCompatibleStateImageBehavior = false;
             this.lv_hombre.View = System.Windows.Forms.View.Details;
@@ -273,7 +290,7 @@
             // 
             this.columnHeader2.Text = "Probabillidad";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 98;
+            this.columnHeader2.Width = 114;
             // 
             // columnHeader5
             // 
@@ -287,10 +304,10 @@
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1328, 610);
+            this.ClientSize = new System.Drawing.Size(1084, 670);
             this.Controls.Add(this.lv_hombre);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnGenerar);
@@ -304,6 +321,8 @@
             this.Controls.Add(this.lblDesde);
             this.Controls.Add(this.tbxIteracion);
             this.Controls.Add(this.lblIteracion);
+            this.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Menu";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Menu_Load);
