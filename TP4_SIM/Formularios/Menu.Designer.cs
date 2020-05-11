@@ -29,20 +29,14 @@
         private void InitializeComponent()
         {
             this.lblIteracion = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbxIteracion = new System.Windows.Forms.TextBox();
+            this.tbxDesde = new System.Windows.Forms.TextBox();
             this.lblDesde = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbxHasta = new System.Windows.Forms.TextBox();
             this.lblHasta = new System.Windows.Forms.Label();
             this.lblMujer = new System.Windows.Forms.Label();
             this.lblHombre = new System.Windows.Forms.Label();
             this.dgv_datos = new System.Windows.Forms.DataGridView();
-            this.lv_hombre = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lv_mujer = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nroCasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rndAbre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AbreNoAbre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,52 +46,64 @@
             this.rndCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rndSuscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Suscrpcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lv_mujer = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnGenerar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.desde = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.hasta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_hombre = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIteracion
             // 
             this.lblIteracion.AutoSize = true;
-            this.lblIteracion.Location = new System.Drawing.Point(43, 98);
+            this.lblIteracion.Location = new System.Drawing.Point(58, 70);
             this.lblIteracion.Name = "lblIteracion";
             this.lblIteracion.Size = new System.Drawing.Size(62, 17);
             this.lblIteracion.TabIndex = 0;
             this.lblIteracion.Text = "Iteracion";
             // 
-            // textBox1
+            // tbxIteracion
             // 
-            this.textBox1.Location = new System.Drawing.Point(135, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 1;
+            this.tbxIteracion.Location = new System.Drawing.Point(150, 65);
+            this.tbxIteracion.Name = "tbxIteracion";
+            this.tbxIteracion.Size = new System.Drawing.Size(100, 22);
+            this.tbxIteracion.TabIndex = 1;
             // 
-            // textBox2
+            // tbxDesde
             // 
-            this.textBox2.Location = new System.Drawing.Point(135, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 3;
+            this.tbxDesde.Location = new System.Drawing.Point(150, 105);
+            this.tbxDesde.Name = "tbxDesde";
+            this.tbxDesde.Size = new System.Drawing.Size(100, 22);
+            this.tbxDesde.TabIndex = 3;
             // 
             // lblDesde
             // 
             this.lblDesde.AutoSize = true;
-            this.lblDesde.Location = new System.Drawing.Point(43, 138);
+            this.lblDesde.Location = new System.Drawing.Point(58, 110);
             this.lblDesde.Name = "lblDesde";
             this.lblDesde.Size = new System.Drawing.Size(49, 17);
             this.lblDesde.TabIndex = 2;
             this.lblDesde.Text = "Desde";
             // 
-            // textBox3
+            // tbxHasta
             // 
-            this.textBox3.Location = new System.Drawing.Point(135, 172);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 5;
+            this.tbxHasta.Location = new System.Drawing.Point(150, 144);
+            this.tbxHasta.Name = "tbxHasta";
+            this.tbxHasta.Size = new System.Drawing.Size(100, 22);
+            this.tbxHasta.TabIndex = 5;
             // 
             // lblHasta
             // 
             this.lblHasta.AutoSize = true;
-            this.lblHasta.Location = new System.Drawing.Point(43, 177);
+            this.lblHasta.Location = new System.Drawing.Point(58, 149);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.Size = new System.Drawing.Size(45, 17);
             this.lblHasta.TabIndex = 4;
@@ -107,7 +113,7 @@
             // lblMujer
             // 
             this.lblMujer.AutoSize = true;
-            this.lblMujer.Location = new System.Drawing.Point(436, 41);
+            this.lblMujer.Location = new System.Drawing.Point(484, 41);
             this.lblMujer.Name = "lblMujer";
             this.lblMujer.Size = new System.Drawing.Size(43, 17);
             this.lblMujer.TabIndex = 8;
@@ -117,7 +123,7 @@
             // lblHombre
             // 
             this.lblHombre.AutoSize = true;
-            this.lblHombre.Location = new System.Drawing.Point(723, 41);
+            this.lblHombre.Location = new System.Drawing.Point(977, 41);
             this.lblHombre.Name = "lblHombre";
             this.lblHombre.Size = new System.Drawing.Size(58, 17);
             this.lblHombre.TabIndex = 9;
@@ -141,53 +147,6 @@
             this.dgv_datos.RowTemplate.Height = 24;
             this.dgv_datos.Size = new System.Drawing.Size(1270, 306);
             this.dgv_datos.TabIndex = 10;
-            // 
-            // lv_hombre
-            // 
-            this.lv_hombre.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.lv_hombre.HideSelection = false;
-            this.lv_hombre.Location = new System.Drawing.Point(620, 70);
-            this.lv_hombre.Name = "lv_hombre";
-            this.lv_hombre.Size = new System.Drawing.Size(272, 180);
-            this.lv_hombre.TabIndex = 12;
-            this.lv_hombre.UseCompatibleStateImageBehavior = false;
-            this.lv_hombre.View = System.Windows.Forms.View.Details;
-            this.lv_hombre.SelectedIndexChanged += new System.EventHandler(this.lv_hombre_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = " ";
-            this.columnHeader1.Width = 98;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = " ";
-            this.columnHeader2.Width = 98;
-            // 
-            // lv_mujer
-            // 
-            this.lv_mujer.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader4});
-            this.lv_mujer.HideSelection = false;
-            this.lv_mujer.Location = new System.Drawing.Point(321, 70);
-            this.lv_mujer.Name = "lv_mujer";
-            this.lv_mujer.Size = new System.Drawing.Size(277, 180);
-            this.lv_mujer.TabIndex = 13;
-            this.lv_mujer.UseCompatibleStateImageBehavior = false;
-            this.lv_mujer.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = " ";
-            this.columnHeader3.Width = 98;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = " ";
-            this.columnHeader4.Width = 98;
             // 
             // nroCasa
             // 
@@ -234,22 +193,116 @@
             this.Suscrpcion.HeaderText = "Suscripcion";
             this.Suscrpcion.Name = "Suscrpcion";
             // 
+            // lv_mujer
+            // 
+            this.lv_mujer.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4,
+            this.desde,
+            this.hasta});
+            this.lv_mujer.HideSelection = false;
+            this.lv_mujer.Location = new System.Drawing.Point(321, 70);
+            this.lv_mujer.Name = "lv_mujer";
+            this.lv_mujer.Size = new System.Drawing.Size(431, 180);
+            this.lv_mujer.TabIndex = 13;
+            this.lv_mujer.UseCompatibleStateImageBehavior = false;
+            this.lv_mujer.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = " ";
+            this.columnHeader3.Width = 98;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Probabillidad";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 98;
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Location = new System.Drawing.Point(161, 207);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerar.TabIndex = 14;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(61, 207);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrar.TabIndex = 16;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // desde
+            // 
+            this.desde.Text = "Desde";
+            this.desde.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // hasta
+            // 
+            this.hasta.Text = "Hasta";
+            this.hasta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lv_hombre
+            // 
+            this.lv_hombre.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.lv_hombre.HideSelection = false;
+            this.lv_hombre.Location = new System.Drawing.Point(822, 70);
+            this.lv_hombre.Name = "lv_hombre";
+            this.lv_hombre.Size = new System.Drawing.Size(431, 180);
+            this.lv_hombre.TabIndex = 17;
+            this.lv_hombre.UseCompatibleStateImageBehavior = false;
+            this.lv_hombre.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = " ";
+            this.columnHeader1.Width = 98;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Probabillidad";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 98;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Desde";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Hasta";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1328, 610);
-            this.Controls.Add(this.lv_mujer);
             this.Controls.Add(this.lv_hombre);
+            this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.btnGenerar);
+            this.Controls.Add(this.lv_mujer);
             this.Controls.Add(this.dgv_datos);
             this.Controls.Add(this.lblHombre);
             this.Controls.Add(this.lblMujer);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbxHasta);
             this.Controls.Add(this.lblHasta);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbxDesde);
             this.Controls.Add(this.lblDesde);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxIteracion);
             this.Controls.Add(this.lblIteracion);
             this.Name = "Menu";
             this.Text = "Form1";
@@ -263,17 +316,14 @@
         #endregion
 
         private System.Windows.Forms.Label lblIteracion;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbxIteracion;
+        private System.Windows.Forms.TextBox tbxDesde;
         private System.Windows.Forms.Label lblDesde;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbxHasta;
         private System.Windows.Forms.Label lblHasta;
         private System.Windows.Forms.Label lblMujer;
         private System.Windows.Forms.Label lblHombre;
         private System.Windows.Forms.DataGridView dgv_datos;
-        private System.Windows.Forms.ListView lv_hombre;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ListView lv_mujer;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
@@ -286,6 +336,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rndCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn rndSuscripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Suscrpcion;
+        private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.ColumnHeader desde;
+        private System.Windows.Forms.ColumnHeader hasta;
+        private System.Windows.Forms.ListView lv_hombre;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
 
