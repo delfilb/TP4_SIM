@@ -37,15 +37,6 @@
             this.lblMujer = new System.Windows.Forms.Label();
             this.lblHombre = new System.Windows.Forms.Label();
             this.dgv_datos = new System.Windows.Forms.DataGridView();
-            this.nroCasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rndAbre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AbreNoAbre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rnd_Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MujerHombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nroCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rndCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rndSuscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Suscrpcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lv_mujer = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,6 +49,17 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nroCasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rndAbre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AbreNoAbre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rnd_Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MujerHombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nroCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rndCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rndSuscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Suscrpcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.utilidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.utilidadAcumulada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,7 +122,7 @@
             // 
             this.lblMujer.AutoSize = true;
             this.lblMujer.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMujer.Location = new System.Drawing.Point(460, 45);
+            this.lblMujer.Location = new System.Drawing.Point(521, 45);
             this.lblMujer.Name = "lblMujer";
             this.lblMujer.Size = new System.Drawing.Size(47, 19);
             this.lblMujer.TabIndex = 8;
@@ -131,7 +133,7 @@
             // 
             this.lblHombre.AutoSize = true;
             this.lblHombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHombre.Location = new System.Drawing.Point(801, 45);
+            this.lblHombre.Location = new System.Drawing.Point(933, 45);
             this.lblHombre.Name = "lblHombre";
             this.lblHombre.Size = new System.Drawing.Size(64, 19);
             this.lblHombre.TabIndex = 9;
@@ -149,58 +151,15 @@
             this.nroCompra,
             this.rndCompra,
             this.rndSuscripcion,
-            this.Suscrpcion});
+            this.Suscrpcion,
+            this.utilidad,
+            this.utilidadAcumulada});
             this.dgv_datos.Location = new System.Drawing.Point(46, 329);
             this.dgv_datos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_datos.Name = "dgv_datos";
             this.dgv_datos.RowTemplate.Height = 24;
-            this.dgv_datos.Size = new System.Drawing.Size(964, 293);
+            this.dgv_datos.Size = new System.Drawing.Size(1149, 293);
             this.dgv_datos.TabIndex = 10;
-            // 
-            // nroCasa
-            // 
-            this.nroCasa.HeaderText = "N°Casa";
-            this.nroCasa.Name = "nroCasa";
-            // 
-            // rndAbre
-            // 
-            this.rndAbre.HeaderText = "N°";
-            this.rndAbre.Name = "rndAbre";
-            // 
-            // AbreNoAbre
-            // 
-            this.AbreNoAbre.HeaderText = "Abre/NoAbre";
-            this.AbreNoAbre.Name = "AbreNoAbre";
-            // 
-            // rnd_Genero
-            // 
-            this.rnd_Genero.HeaderText = "N°";
-            this.rnd_Genero.Name = "rnd_Genero";
-            // 
-            // MujerHombre
-            // 
-            this.MujerHombre.HeaderText = "Mujer/Hombre";
-            this.MujerHombre.Name = "MujerHombre";
-            // 
-            // nroCompra
-            // 
-            this.nroCompra.HeaderText = "N°";
-            this.nroCompra.Name = "nroCompra";
-            // 
-            // rndCompra
-            // 
-            this.rndCompra.HeaderText = "Compra/NoCompra";
-            this.rndCompra.Name = "rndCompra";
-            // 
-            // rndSuscripcion
-            // 
-            this.rndSuscripcion.HeaderText = "N°";
-            this.rndSuscripcion.Name = "rndSuscripcion";
-            // 
-            // Suscrpcion
-            // 
-            this.Suscrpcion.HeaderText = "Suscripcion";
-            this.Suscrpcion.Name = "Suscrpcion";
             // 
             // lv_mujer
             // 
@@ -211,7 +170,7 @@
             this.hasta});
             this.lv_mujer.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_mujer.HideSelection = false;
-            this.lv_mujer.Location = new System.Drawing.Point(321, 83);
+            this.lv_mujer.Location = new System.Drawing.Point(374, 83);
             this.lv_mujer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lv_mujer.Name = "lv_mujer";
             this.lv_mujer.Size = new System.Drawing.Size(341, 184);
@@ -273,7 +232,7 @@
             this.columnHeader6});
             this.lv_hombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_hombre.HideSelection = false;
-            this.lv_hombre.Location = new System.Drawing.Point(674, 83);
+            this.lv_hombre.Location = new System.Drawing.Point(791, 83);
             this.lv_hombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lv_hombre.Name = "lv_hombre";
             this.lv_hombre.Size = new System.Drawing.Size(336, 184);
@@ -302,12 +261,68 @@
             this.columnHeader6.Text = "Hasta";
             this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // nroCasa
+            // 
+            this.nroCasa.HeaderText = "N°Casa";
+            this.nroCasa.Name = "nroCasa";
+            // 
+            // rndAbre
+            // 
+            this.rndAbre.HeaderText = "N°";
+            this.rndAbre.Name = "rndAbre";
+            // 
+            // AbreNoAbre
+            // 
+            this.AbreNoAbre.HeaderText = "Abre/NoAbre";
+            this.AbreNoAbre.Name = "AbreNoAbre";
+            // 
+            // rnd_Genero
+            // 
+            this.rnd_Genero.HeaderText = "N°";
+            this.rnd_Genero.Name = "rnd_Genero";
+            // 
+            // MujerHombre
+            // 
+            this.MujerHombre.HeaderText = "Mujer/Hombre";
+            this.MujerHombre.Name = "MujerHombre";
+            // 
+            // nroCompra
+            // 
+            this.nroCompra.HeaderText = "N°";
+            this.nroCompra.Name = "nroCompra";
+            // 
+            // rndCompra
+            // 
+            this.rndCompra.HeaderText = "Compra/NoCompra";
+            this.rndCompra.Name = "rndCompra";
+            // 
+            // rndSuscripcion
+            // 
+            this.rndSuscripcion.HeaderText = "N°";
+            this.rndSuscripcion.Name = "rndSuscripcion";
+            // 
+            // Suscrpcion
+            // 
+            this.Suscrpcion.HeaderText = "Suscripcion";
+            this.Suscrpcion.Name = "Suscrpcion";
+            // 
+            // utilidad
+            // 
+            this.utilidad.HeaderText = "Utilidad";
+            this.utilidad.Name = "utilidad";
+            // 
+            // utilidadAcumulada
+            // 
+            this.utilidadAcumulada.HeaderText = "Utilidad Acumulada";
+            this.utilidadAcumulada.Name = "utilidadAcumulada";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1084, 670);
+            this.ClientSize = new System.Drawing.Size(1207, 670);
             this.Controls.Add(this.lv_hombre);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnGenerar);
@@ -346,15 +361,6 @@
         private System.Windows.Forms.ListView lv_mujer;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nroCasa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rndAbre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AbreNoAbre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rnd_Genero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MujerHombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nroCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rndCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rndSuscripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Suscrpcion;
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.ColumnHeader desde;
@@ -364,6 +370,17 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nroCasa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rndAbre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AbreNoAbre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rnd_Genero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MujerHombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nroCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rndCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rndSuscripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Suscrpcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn utilidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn utilidadAcumulada;
     }
 }
 

@@ -16,10 +16,11 @@ namespace TP4_SIM.Clases
             string genero = "";
             double probCompra = 0;
             string venta = "";
-            double suscripcion = 0;
-           }
+            int suscripcion = 0;
+        }
 
-        public double numSuscrip1, numSuscrip2, numSuscrip3, numSuscrip4, probCompra, suscripcion;
+        public double numSuscrip1, numSuscrip2, numSuscrip3, numSuscrip4, probCompra; 
+        public int suscripcion;
         public string genero, venta;
     }
 
