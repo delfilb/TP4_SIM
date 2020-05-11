@@ -34,8 +34,8 @@ namespace TP4_SIM
             else
             {
                 abre = "Abre";
-                double cliente = random.NextDouble();
-                if (cliente > 0.20)
+                double rnd_cliente = random.NextDouble();
+                if (rnd_cliente > 0.20)
                 {
                     persona.genero = "Mujer";
                     persona.numSuscrip1 = 0.60;
@@ -43,7 +43,7 @@ namespace TP4_SIM
                     persona.numSuscrip3 = 1;
                     persona.numSuscrip4 = 0;
                     persona.probCompra = 0.15;
-                    Cliente(persona, abre, rnd_Abre, cliente,desde, hasta, fila);
+                    Cliente(persona, abre, rnd_Abre, rnd_cliente,desde, hasta, fila);
                 }
                 else 
                 {
@@ -53,12 +53,12 @@ namespace TP4_SIM
                     persona.numSuscrip3 = 0.80;
                     persona.numSuscrip4 = 1;
                     persona.probCompra = 0.25;
-                    Cliente(persona, abre, rnd_Abre, cliente,desde, hasta, fila);
+                    Cliente(persona, abre, rnd_Abre, rnd_cliente,desde, hasta, fila);
                 }
             }
         }
 
-        private void Cliente(Persona persona, string abre, double rnd_Abre, double cliente, int desde, int hasta, int fila)
+        private void Cliente(Persona persona, string abre, double rnd_Abre, double rnd_cliente, int desde, int hasta, int fila)
         {
             double rnd_compra = 0;
             double rnd_suscripcion = 0;
@@ -114,7 +114,7 @@ namespace TP4_SIM
 
             if (fila >= desde && fila <= hasta)
             {
-                dgv_datos.Rows.Add(fila, rnd_Abre, abre, cliente, persona.genero, rnd_compra, persona.venta, rnd_suscripcion, persona.suscripcion);
+                dgv_datos.Rows.Add(fila, Decimales.truncarA4Decimales(rnd_Abre), abre, Decimales.truncarA4Decimales(rnd_cliente), persona.genero, Decimales.truncarA4Decimales(rnd_compra), persona.venta, Decimales.truncarA4Decimales(rnd_suscripcion), persona.suscripcion);
             }
         }
 
