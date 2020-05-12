@@ -68,12 +68,11 @@ namespace TP4_SIM
             if (abre == "Abre")
             {
                 rnd_compra = random.NextDouble();
-                rnd_suscripcion = random.NextDouble();
 
                 if (rnd_compra <= persona.probCompra)
                 {
                     persona.venta = "Compra";
-
+                    rnd_suscripcion = random.NextDouble();
 
                     if (rnd_suscripcion < persona.numSuscrip1)
                     {
@@ -109,35 +108,35 @@ namespace TP4_SIM
                 }
                 else
                 {
-                    rnd_suscripcion = 0;
                     persona.venta = "No compra";
                 }
             }
 
 
             int nuevo = persona.suscripcion * 2;
-            arreglo[fila] = arreglo[fila - 1] + nuevo;
+            //arreglo[fila] = arreglo[fila - 1] + nuevo;
 
-            if (fila == 1)
+            if (fila == 0)
             {
-                arreglo[fila] = nuevo;
+                arreglo[0] = nuevo;
+                arreglo[1] = nuevo;
             }
-
+            else
+            {
+                arreglo[0] = arreglo[0] + nuevo;
+                if (nuevo > 0)
+                {
+                    arreglo[1] = nuevo;
+                }
+                
+            }
+            
             if (fila >= desde && fila <= hasta)
             {
-                dgv_datos.Rows.Add(fila, Decimales.truncarA4Decimales(rnd_Abre), abre, Decimales.truncarA4Decimales(rnd_cliente), persona.genero, Decimales.truncarA4Decimales(rnd_compra), persona.venta, Decimales.truncarA4Decimales(rnd_suscripcion), persona.suscripcion, nuevo, arreglo[fila]);
+                dgv_datos.Rows.Add(fila, Decimales.truncarA4Decimales(rnd_Abre), abre, Decimales.truncarA4Decimales(rnd_cliente), persona.genero, Decimales.truncarA4Decimales(rnd_compra), persona.venta, Decimales.truncarA4Decimales(rnd_suscripcion), persona.suscripcion, nuevo, arreglo[0]);
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Menu_Load(object sender, EventArgs e)
         {
@@ -217,10 +216,6 @@ namespace TP4_SIM
 
         }
 
-        private void lv_hombre_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void LimpiarCampos(){
             tbxIteracion.Text = "";
@@ -246,7 +241,7 @@ namespace TP4_SIM
                 int hasta = int.Parse(has);
 
                 int[] arreglo;
-                arreglo = new int[iteracion + 1];
+                arreglo = new int[2];
 
                 if (desde >= hasta)
                 {
@@ -257,7 +252,7 @@ namespace TP4_SIM
                 {
                     if (desde < iteracion && hasta <= iteracion && hasta > desde)
                     {
-                        for (int i = 1; i <= iteracion; i++)
+                        for (int i = 0; i <= iteracion; i++)
                         {
                             monteCarlo(desde, hasta, i, arreglo);
                         }
