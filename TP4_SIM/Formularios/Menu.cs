@@ -20,7 +20,7 @@ namespace TP4_SIM
             InitializeComponent();
         }
 
-        private void monteCarlo(int desde, int hasta, int fila, int[] arreglo)
+        private void monteCarlo(int desde, int hasta, int fila, int[] arreglo, int iteracion)
         {
             Persona persona = new Persona();
             double noAbre = 0.30;
@@ -29,7 +29,7 @@ namespace TP4_SIM
 
             if (rnd_Abre <= noAbre)
             {
-                Cliente(persona, abre, rnd_Abre, 0, desde, hasta, fila, arreglo);
+                Cliente(persona, abre, rnd_Abre, 0, desde, hasta, fila, arreglo, iteracion);
             }
             else
             {
@@ -43,7 +43,7 @@ namespace TP4_SIM
                     persona.numSuscrip3 = 1;
                     persona.numSuscrip4 = 0;
                     persona.probCompra = 0.15;
-                    Cliente(persona, abre, rnd_Abre, rnd_cliente,desde, hasta, fila, arreglo);
+                    Cliente(persona, abre, rnd_Abre, rnd_cliente,desde, hasta, fila, arreglo, iteracion);
                 }
                 else 
                 {
@@ -53,12 +53,12 @@ namespace TP4_SIM
                     persona.numSuscrip3 = 0.80;
                     persona.numSuscrip4 = 1;
                     persona.probCompra = 0.25;
-                    Cliente(persona, abre, rnd_Abre, rnd_cliente, desde, hasta, fila, arreglo);
+                    Cliente(persona, abre, rnd_Abre, rnd_cliente, desde, hasta, fila, arreglo, iteracion);
                 }
             }
         }
 
-        private void Cliente(Persona persona, string abre, double rnd_Abre, double rnd_cliente, int desde, int hasta, int fila, int[] arreglo)
+        private void Cliente(Persona persona, string abre, double rnd_Abre, double rnd_cliente, int desde, int hasta, int fila, int[] arreglo, int iteracion)
         {
             
             double rnd_compra = 0;
@@ -132,6 +132,11 @@ namespace TP4_SIM
             }
             
             if (fila >= desde && fila <= hasta)
+            {
+                dgv_datos.Rows.Add(fila, Decimales.truncarA4Decimales(rnd_Abre), abre, Decimales.truncarA4Decimales(rnd_cliente), persona.genero, Decimales.truncarA4Decimales(rnd_compra), persona.venta, Decimales.truncarA4Decimales(rnd_suscripcion), persona.suscripcion, nuevo, arreglo[0]);
+            }
+            
+            if(fila==iteracion)
             {
                 dgv_datos.Rows.Add(fila, Decimales.truncarA4Decimales(rnd_Abre), abre, Decimales.truncarA4Decimales(rnd_cliente), persona.genero, Decimales.truncarA4Decimales(rnd_compra), persona.venta, Decimales.truncarA4Decimales(rnd_suscripcion), persona.suscripcion, nuevo, arreglo[0]);
             }
@@ -254,7 +259,7 @@ namespace TP4_SIM
                     {
                         for (int i = 0; i <= iteracion; i++)
                         {
-                            monteCarlo(desde, hasta, i, arreglo);
+                            monteCarlo(desde, hasta, i, arreglo, iteracion);
                         }
                     }
                     else { 
