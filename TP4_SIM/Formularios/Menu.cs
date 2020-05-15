@@ -189,27 +189,27 @@ namespace TP4_SIM
             ListViewItem lvl1 = new ListViewItem("Prob Abra", 0);
             lvl1.SubItems.Add("80%");
             lvl1.SubItems.Add("0,20");
-            lvl1.SubItems.Add("1");
+            lvl1.SubItems.Add("0,9999");
 
             ListViewItem lvl2 = new ListViewItem("Prob Compra", 0);
             lvl2.SubItems.Add("15%");
             lvl2.SubItems.Add("0");
-            lvl2.SubItems.Add("0,14999");
+            lvl2.SubItems.Add("0,1499");
 
             ListViewItem lvl3 = new ListViewItem("N° Suscrip 1", 0);
-            lvl3.SubItems.Add("0,60");
+            lvl3.SubItems.Add("60%");
             lvl3.SubItems.Add("0");
             lvl3.SubItems.Add("0,59");
 
             ListViewItem lvl4 = new ListViewItem("N° Suscrip 2", 0);
-            lvl4.SubItems.Add("0.30");
+            lvl4.SubItems.Add("30%");
             lvl4.SubItems.Add("0,60");
             lvl4.SubItems.Add("0,89");
 
             ListViewItem lvl5 = new ListViewItem("N° Suscrip 3", 0);
-            lvl5.SubItems.Add("0.10");
+            lvl5.SubItems.Add("10%");
             lvl5.SubItems.Add("0,90");
-            lvl5.SubItems.Add("1");
+            lvl5.SubItems.Add("0,9999");
 
             lv_mujer.Items.Add(lvl1);
             lv_mujer.Items.Add(lvl2);
@@ -223,32 +223,32 @@ namespace TP4_SIM
             ListViewItem lvl6 = new ListViewItem("Prob Abra", 0);
             lvl6.SubItems.Add("20%");
             lvl6.SubItems.Add("0");
-            lvl6.SubItems.Add("0,19999");
+            lvl6.SubItems.Add("0,1999");
 
             ListViewItem lvl7 = new ListViewItem("Prob Compra", 0);
             lvl7.SubItems.Add("25%");
             lvl7.SubItems.Add("0");
-            lvl7.SubItems.Add("0,24999");
+            lvl7.SubItems.Add("0,2499");
 
             ListViewItem lvl8 = new ListViewItem("N° Suscrip 1", 0);
-            lvl8.SubItems.Add("0,10");
+            lvl8.SubItems.Add("10%");
             lvl8.SubItems.Add("0");
             lvl8.SubItems.Add("0,09");
 
             ListViewItem lvl9 = new ListViewItem("N° Suscrip 2", 0);
-            lvl9.SubItems.Add("0.40");
+            lvl9.SubItems.Add("40%");
             lvl9.SubItems.Add("0,10");
             lvl9.SubItems.Add("0,49");
 
             ListViewItem lvl10 = new ListViewItem("N° Suscrip 3", 0);
-            lvl10.SubItems.Add("0.30");
+            lvl10.SubItems.Add("30%");
             lvl10.SubItems.Add("0,50");
             lvl10.SubItems.Add("0,79");
 
             ListViewItem lvl11 = new ListViewItem("N° Suscrip 4", 0);
-            lvl11.SubItems.Add("0,20");
+            lvl11.SubItems.Add("20%");
             lvl11.SubItems.Add("0,80");
-            lvl11.SubItems.Add("1");
+            lvl11.SubItems.Add("0,9999");
 
             lv_hombre.Items.Add(lvl6);
             lv_hombre.Items.Add(lvl7);
@@ -257,7 +257,20 @@ namespace TP4_SIM
             lv_hombre.Items.Add(lvl10);
             lv_hombre.Items.Add(lvl11);
 
+            // List View Abre
 
+            ListViewItem lvl12 = new ListViewItem("No Abre", 0);
+            lvl12.SubItems.Add("30%");
+            lvl12.SubItems.Add("0");
+            lvl12.SubItems.Add("0,2999");
+
+            ListViewItem lvl13 = new ListViewItem("Abre", 0);
+            lvl13.SubItems.Add("70%");
+            lvl13.SubItems.Add("0,30");
+            lvl13.SubItems.Add("0,9999");
+
+            lv_abre.Items.Add(lvl12);
+            lv_abre.Items.Add(lvl13);
         }
 
 

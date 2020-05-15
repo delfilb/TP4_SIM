@@ -63,6 +63,12 @@
             this.lblDesde = new System.Windows.Forms.Label();
             this.tbxIteracion = new System.Windows.Forms.TextBox();
             this.lblIteracion = new System.Windows.Forms.Label();
+            this.lv_abre = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblAbre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,10 +100,10 @@
             this.columnHeader6});
             this.lv_hombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_hombre.HideSelection = false;
-            this.lv_hombre.Location = new System.Drawing.Point(803, 81);
+            this.lv_hombre.Location = new System.Drawing.Point(966, 81);
             this.lv_hombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lv_hombre.Name = "lv_hombre";
-            this.lv_hombre.Size = new System.Drawing.Size(336, 184);
+            this.lv_hombre.Size = new System.Drawing.Size(310, 184);
             this.lv_hombre.TabIndex = 32;
             this.lv_hombre.UseCompatibleStateImageBehavior = false;
             this.lv_hombre.View = System.Windows.Forms.View.Details;
@@ -109,9 +115,9 @@
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Probabillidad";
+            this.columnHeader2.Text = "P()";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 114;
+            this.columnHeader2.Width = 79;
             // 
             // columnHeader5
             // 
@@ -156,10 +162,10 @@
             this.hasta});
             this.lv_mujer.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_mujer.HideSelection = false;
-            this.lv_mujer.Location = new System.Drawing.Point(386, 81);
+            this.lv_mujer.Location = new System.Drawing.Point(637, 81);
             this.lv_mujer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lv_mujer.Name = "lv_mujer";
-            this.lv_mujer.Size = new System.Drawing.Size(341, 184);
+            this.lv_mujer.Size = new System.Drawing.Size(310, 184);
             this.lv_mujer.TabIndex = 29;
             this.lv_mujer.UseCompatibleStateImageBehavior = false;
             this.lv_mujer.View = System.Windows.Forms.View.Details;
@@ -167,13 +173,13 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = " ";
-            this.columnHeader3.Width = 98;
+            this.columnHeader3.Width = 97;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Probabillidad";
+            this.columnHeader4.Text = "P()";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 119;
+            this.columnHeader4.Width = 88;
             // 
             // desde
             // 
@@ -272,7 +278,7 @@
             // 
             this.lblHombre.AutoSize = true;
             this.lblHombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHombre.Location = new System.Drawing.Point(945, 43);
+            this.lblHombre.Location = new System.Drawing.Point(1087, 43);
             this.lblHombre.Name = "lblHombre";
             this.lblHombre.Size = new System.Drawing.Size(64, 19);
             this.lblHombre.TabIndex = 27;
@@ -282,7 +288,7 @@
             // 
             this.lblMujer.AutoSize = true;
             this.lblMujer.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMujer.Location = new System.Drawing.Point(533, 43);
+            this.lblMujer.Location = new System.Drawing.Point(734, 43);
             this.lblMujer.Name = "lblMujer";
             this.lblMujer.Size = new System.Drawing.Size(47, 19);
             this.lblMujer.TabIndex = 26;
@@ -342,13 +348,63 @@
             this.lblIteracion.TabIndex = 20;
             this.lblIteracion.Text = "Iteracion";
             // 
+            // lv_abre
+            // 
+            this.lv_abre.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.lv_abre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_abre.HideSelection = false;
+            this.lv_abre.Location = new System.Drawing.Point(337, 112);
+            this.lv_abre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lv_abre.Name = "lv_abre";
+            this.lv_abre.Size = new System.Drawing.Size(278, 122);
+            this.lv_abre.TabIndex = 35;
+            this.lv_abre.UseCompatibleStateImageBehavior = false;
+            this.lv_abre.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = " ";
+            this.columnHeader7.Width = 75;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "P()";
+            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader8.Width = 78;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Desde";
+            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Hasta";
+            this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblAbre
+            // 
+            this.lblAbre.AutoSize = true;
+            this.lblAbre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAbre.Location = new System.Drawing.Point(423, 75);
+            this.lblAbre.Name = "lblAbre";
+            this.lblAbre.Size = new System.Drawing.Size(114, 19);
+            this.lblAbre.TabIndex = 36;
+            this.lblAbre.Text = "Abre o No Abre";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1317, 743);
+            this.ClientSize = new System.Drawing.Size(1317, 696);
+            this.Controls.Add(this.lblAbre);
+            this.Controls.Add(this.lv_abre);
             this.Controls.Add(this.lblProb);
             this.Controls.Add(this.lbltxt);
             this.Controls.Add(this.lv_hombre);
@@ -412,6 +468,12 @@
         private System.Windows.Forms.Label lblDesde;
         private System.Windows.Forms.TextBox tbxIteracion;
         private System.Windows.Forms.Label lblIteracion;
+        private System.Windows.Forms.ListView lv_abre;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.Label lblAbre;
     }
 }
 
