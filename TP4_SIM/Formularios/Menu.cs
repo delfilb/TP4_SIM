@@ -20,16 +20,17 @@ namespace TP4_SIM
             InitializeComponent();
         }
 
-        private void monteCarlo(int desde, int hasta, int fila, int[] arreglo)
+        private void monteCarlo(int desde, int hasta, int fila, int[] arreglo, int iteracion, int[] contador) //***********El contador************
         {
             Persona persona = new Persona();
             double noAbre = 0.30;
             double rnd_Abre = random.NextDouble();
             string abre = "No abre";
 
+
             if (rnd_Abre <= noAbre)
             {
-                Cliente(persona, abre, rnd_Abre, 0, desde, hasta, fila, arreglo);
+                Cliente(persona, abre, rnd_Abre, 0, desde, hasta, fila, arreglo, iteracion, contador); //***********El contador************
             }
             else
             {
@@ -43,9 +44,9 @@ namespace TP4_SIM
                     persona.numSuscrip3 = 1;
                     persona.numSuscrip4 = 0;
                     persona.probCompra = 0.15;
-                    Cliente(persona, abre, rnd_Abre, rnd_cliente,desde, hasta, fila, arreglo);
+                    Cliente(persona, abre, rnd_Abre, rnd_cliente, desde, hasta, fila, arreglo, iteracion, contador);//***********El contador************
                 }
-                else 
+                else
                 {
                     persona.genero = "Hombre";
                     persona.numSuscrip1 = 0.10;
@@ -53,26 +54,47 @@ namespace TP4_SIM
                     persona.numSuscrip3 = 0.80;
                     persona.numSuscrip4 = 1;
                     persona.probCompra = 0.25;
-                    Cliente(persona, abre, rnd_Abre, rnd_cliente, desde, hasta, fila, arreglo);
+                    Cliente(persona, abre, rnd_Abre, rnd_cliente, desde, hasta, fila, arreglo, iteracion, contador);//***********El contador************
                 }
             }
         }
 
-        private void Cliente(Persona persona, string abre, double rnd_Abre, double rnd_cliente, int desde, int hasta, int fila, int[] arreglo)
+        private void Cliente(Persona persona, string abre, double rnd_Abre, double rnd_cliente, int desde, int hasta, int fila, int[] arreglo, int iteracion, int[] contador)//***********El contador************
         {
-            
+
             double rnd_compra = 0;
             double rnd_suscripcion = 0;
-   
-            
+            int cont = 0; //***********El contador************
+
+
             if (abre == "Abre")
             {
                 rnd_compra = random.NextDouble();
-                rnd_suscripcion = random.NextDouble();
 
                 if (rnd_compra <= persona.probCompra)
                 {
                     persona.venta = "Compra";
+
+                    rnd_suscripcion = random.NextDouble();
+                    cont = cont + 1;        //***********El contador************
+                    //*************************
+                    //para contar cuantos abren
+                    if (fila == 0)
+                    {
+                        contador[0] = cont;
+                        contador[1] = cont;
+                    }
+                    else
+                    {
+                        contador[0] = contador[0] + cont;
+                        if (cont > 0)
+                        {
+                            contador[1] = cont;
+                        }
+
+                    }
+                    //hasta aca*****************
+
 
 
                     if (rnd_suscripcion < persona.numSuscrip1)
@@ -106,38 +128,59 @@ namespace TP4_SIM
                             }
                         }
                     }
+
                 }
+
+
+
+
                 else
                 {
-                    rnd_suscripcion = 0;
                     persona.venta = "No compra";
                 }
             }
 
 
             int nuevo = persona.suscripcion * 2;
-            arreglo[fila] = arreglo[fila - 1] + nuevo;
+            //arreglo[fila] = arreglo[fila - 1] + nuevo;
 
-            if (fila == 1)
+            if (fila == 0)
             {
-                arreglo[fila] = nuevo;
+                arreglo[0] = nuevo;
+                arreglo[1] = nuevo;
             }
+            else
+            {
+                arreglo[0] = arreglo[0] + nuevo;
+                if (nuevo > 0)
+                {
+                    arreglo[1] = nuevo;
+                }
+
+            }
+
+
 
             if (fila >= desde && fila <= hasta)
             {
-                dgv_datos.Rows.Add(fila, Decimales.truncarA4Decimales(rnd_Abre), abre, Decimales.truncarA4Decimales(rnd_cliente), persona.genero, Decimales.truncarA4Decimales(rnd_compra), persona.venta, Decimales.truncarA4Decimales(rnd_suscripcion), persona.suscripcion, nuevo, arreglo[fila]);
+                //******* Aca agregue el ultimo parametro: Decimales.truncarA4Decimales(contador [0]
+
+                dgv_datos.Rows.Add(fila, Decimales.truncarA4Decimales(rnd_Abre), abre, Decimales.truncarA4Decimales(rnd_cliente), persona.genero, Decimales.truncarA4Decimales(rnd_compra), persona.venta, Decimales.truncarA4Decimales(rnd_suscripcion), persona.suscripcion, nuevo, arreglo[0], Decimales.truncarA4Decimales(contador[0]));
             }
+            if (fila == iteracion)
+            {
+                //******* Aca agregue el ultimo parametro: Decimales.truncarA4Decimales(contador [0]
+                dgv_datos.Rows.Add(fila, Decimales.truncarA4Decimales(rnd_Abre), abre, Decimales.truncarA4Decimales(rnd_cliente), persona.genero, Decimales.truncarA4Decimales(rnd_compra), persona.venta, Decimales.truncarA4Decimales(rnd_suscripcion), persona.suscripcion, nuevo, arreglo[0], Decimales.truncarA4Decimales(contador[0]));
+                //***********Esto para calcular y mostrar la prob
+                double prob = Decimales.truncarA4Decimales(contador[0]) / iteracion;
+                lblProb.Visible = true;
+                lblProb.Text = prob.ToString();
+            }
+
+
+
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Menu_Load(object sender, EventArgs e)
         {
@@ -217,12 +260,9 @@ namespace TP4_SIM
 
         }
 
-        private void lv_hombre_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void LimpiarCampos()
         {
-
-        }
-
-        private void LimpiarCampos(){
             tbxIteracion.Text = "";
             tbxDesde.Text = "";
             tbxHasta.Text = "";
@@ -231,22 +271,51 @@ namespace TP4_SIM
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBorrar_Click_1(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            //******************Esto Para que se oculte****************
+            lblProb.Visible = false;
+        }
+
+        private void dgv_datos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnGenerar_Click_1(object sender, EventArgs e)
+        {
             string iter = tbxIteracion.Text;
             string des = tbxDesde.Text;
             string has = tbxHasta.Text;
-              
+
             if (iter == "" || des == "" || has == "")
             {
                 MessageBox.Show("Ingrese todo los valores");
                 tbxIteracion.Focus();
-            } else
+            }
+            else
             {
                 int iteracion = int.Parse(iter);
                 int desde = int.Parse(des);
                 int hasta = int.Parse(has);
 
                 int[] arreglo;
-                arreglo = new int[iteracion + 1];
+                arreglo = new int[2];
+
+                //**************Esto agregue
+                //contador
+                int[] contador;
+                contador = new int[2];
+                //***************************
 
                 if (desde >= hasta)
                 {
@@ -257,22 +326,18 @@ namespace TP4_SIM
                 {
                     if (desde < iteracion && hasta <= iteracion && hasta > desde)
                     {
-                        for (int i = 1; i <= iteracion; i++)
+                        for (int i = 0; i <= iteracion; i++)
                         {
-                            monteCarlo(desde, hasta, i, arreglo);
+                            monteCarlo(desde, hasta, i, arreglo, iteracion, contador); //************Aca el contador que lo pase como parametro
                         }
                     }
-                    else { 
+                    else
+                    {
                         MessageBox.Show("Valores fuera de rango");
                         tbxDesde.Focus();
                     }
                 }
             }
-        }
-
-        private void btnBorrar_Click(object sender, EventArgs e)
-        {
-            LimpiarCampos();
         }
     }
 }

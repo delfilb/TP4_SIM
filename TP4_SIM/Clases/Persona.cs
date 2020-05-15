@@ -8,7 +8,8 @@ namespace TP4_SIM.Clases
 {
     public class Persona
     {
-        public Persona() {
+        public Persona()
+        {
             double numSuscrip1 = 0;
             double numSuscrip2 = 0;
             double numSuscrip3 = 0;
@@ -19,7 +20,7 @@ namespace TP4_SIM.Clases
             int suscripcion = 0;
         }
 
-        public double numSuscrip1, numSuscrip2, numSuscrip3, numSuscrip4, probCompra; 
+        public double numSuscrip1, numSuscrip2, numSuscrip3, numSuscrip4, probCompra;
         public int suscripcion;
         public string genero, venta;
     }
