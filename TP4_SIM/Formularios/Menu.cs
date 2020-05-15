@@ -271,6 +271,15 @@ namespace TP4_SIM
 
             lv_abre.Items.Add(lvl12);
             lv_abre.Items.Add(lvl13);
+
+            // List View Abre
+
+            ListViewItem lvl14 = new ListViewItem("Utilidad por cada", 0);
+            lvl14.SubItems.Add("$2");
+            ListViewItem lvl15 = new ListViewItem("suscripcion vendida", 0);
+
+            lv_utilidad.Items.Add(lvl14);
+            lv_utilidad.Items.Add(lvl15);
         }
 
 

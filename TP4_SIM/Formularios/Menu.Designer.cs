@@ -69,6 +69,9 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblAbre = new System.Windows.Forms.Label();
+            this.lv_utilidad = new System.Windows.Forms.ListView();
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -278,7 +281,7 @@
             // 
             this.lblHombre.AutoSize = true;
             this.lblHombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHombre.Location = new System.Drawing.Point(1087, 43);
+            this.lblHombre.Location = new System.Drawing.Point(1096, 43);
             this.lblHombre.Name = "lblHombre";
             this.lblHombre.Size = new System.Drawing.Size(64, 19);
             this.lblHombre.TabIndex = 27;
@@ -288,7 +291,7 @@
             // 
             this.lblMujer.AutoSize = true;
             this.lblMujer.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMujer.Location = new System.Drawing.Point(734, 43);
+            this.lblMujer.Location = new System.Drawing.Point(776, 43);
             this.lblMujer.Name = "lblMujer";
             this.lblMujer.Size = new System.Drawing.Size(47, 19);
             this.lblMujer.TabIndex = 26;
@@ -357,10 +360,10 @@
             this.columnHeader10});
             this.lv_abre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_abre.HideSelection = false;
-            this.lv_abre.Location = new System.Drawing.Point(337, 112);
+            this.lv_abre.Location = new System.Drawing.Point(337, 81);
             this.lv_abre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lv_abre.Name = "lv_abre";
-            this.lv_abre.Size = new System.Drawing.Size(278, 122);
+            this.lv_abre.Size = new System.Drawing.Size(278, 107);
             this.lv_abre.TabIndex = 35;
             this.lv_abre.UseCompatibleStateImageBehavior = false;
             this.lv_abre.View = System.Windows.Forms.View.Details;
@@ -390,11 +393,37 @@
             // 
             this.lblAbre.AutoSize = true;
             this.lblAbre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAbre.Location = new System.Drawing.Point(423, 75);
+            this.lblAbre.Location = new System.Drawing.Point(421, 43);
             this.lblAbre.Name = "lblAbre";
             this.lblAbre.Size = new System.Drawing.Size(114, 19);
             this.lblAbre.TabIndex = 36;
             this.lblAbre.Text = "Abre o No Abre";
+            // 
+            // lv_utilidad
+            // 
+            this.lv_utilidad.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader11,
+            this.columnHeader12});
+            this.lv_utilidad.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_utilidad.HideSelection = false;
+            this.lv_utilidad.Location = new System.Drawing.Point(337, 196);
+            this.lv_utilidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lv_utilidad.Name = "lv_utilidad";
+            this.lv_utilidad.Size = new System.Drawing.Size(278, 69);
+            this.lv_utilidad.TabIndex = 37;
+            this.lv_utilidad.UseCompatibleStateImageBehavior = false;
+            this.lv_utilidad.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = " ";
+            this.columnHeader11.Width = 137;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "";
+            this.columnHeader12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader12.Width = 136;
             // 
             // Menu
             // 
@@ -403,6 +432,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1317, 696);
+            this.Controls.Add(this.lv_utilidad);
             this.Controls.Add(this.lblAbre);
             this.Controls.Add(this.lv_abre);
             this.Controls.Add(this.lblProb);
@@ -474,6 +504,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Label lblAbre;
+        private System.Windows.Forms.ListView lv_utilidad;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
     }
 }
 
